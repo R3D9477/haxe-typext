@@ -1,8 +1,8 @@
 {
-	"name": "haxe-typext",
+	"name": "typext",
 	"url": "https://github.com/r3d9u11/haxe-typext",
 	
-	"classPath": "haxe-typext",
+	"classPath": "typext",
 	
 	"license": "MIT",
 	"version": "1.0.0",
