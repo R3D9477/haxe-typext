@@ -1,0 +1,20 @@
+{
+	"name": "haxe-typext",
+	"url": "https://github.com/r3d9u11/haxe-typext",
+	
+	"classPath": "haxe-typext",
+	
+	"license": "MIT",
+	"version": "1.0.0",
+	"contributors": ["Eugene"],
+	
+	"description": "",
+	"releasenote": "see CHANGELOG.md",
+	
+	"tags": [
+		"haxe",
+		"type",
+		"cpp",
+		"neko"
+	]
+}
