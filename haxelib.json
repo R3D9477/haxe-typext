@@ -11,6 +11,10 @@
 	"description": "",
 	"releasenote": "see CHANGELOG.md",
 	
+	"dependencies": {
+	
+	},
+	
 	"tags": [
 		"haxe",
 		"type",
