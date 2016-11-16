@@ -36,9 +36,6 @@ class StringExtender {
 		return dyn;
 	}
 	
-	public static function toCapitalLetterCase (str:String) : String
-		return str.substr(0, 1).toUpperCase() + str.substr(1);
-	
 	public static function toTitleCase (str:String) : String
 		return str.substr(0, 1).toUpperCase() + str.substr(1);
 	
