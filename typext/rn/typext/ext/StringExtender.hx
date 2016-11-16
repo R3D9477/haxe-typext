@@ -40,7 +40,7 @@ class StringExtender {
 		return str.substr(0, 1).toUpperCase() + str.substr(1);
 	
 	public static function toTitleCase (str:String) : String
-		return str.substr(0, 1).toUpperCase() + str.substr(1).toLowerCase();
+		return str.substr(0, 1).toUpperCase() + str.substr(1);
 	
 	public static function multiSplit (str:String, separators:Array<String>) : Array<String> {
 		var result:Array<String> = [str];
