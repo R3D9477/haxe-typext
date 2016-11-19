@@ -12,8 +12,9 @@ class XmlExtender {
 		return (new XPathHx(xpath)).selectNodes(xml).array();
 	
 	public static function removeSelf (xml:Xml) : Void
-		if (xml.parent != null)
-			xml.parent.removeChild(xml);
+		if (xml != null)
+			if (xml.parent != null)
+				xml.parent.removeChild(xml);
 	
 	public static function replaceWith (xml:Xml, newXml:Xml) : Null<Xml> {
 		var xmlParent:Xml = xml.parent;
