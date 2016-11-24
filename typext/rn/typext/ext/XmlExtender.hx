@@ -34,13 +34,14 @@ class XmlExtender {
 		var n = null;
 		var i = 0;
 		
-		for (node in xml.elements()) {
-			if (i <= index)
-				n = node;
-			else break;
-			
-			i++;
-		}
+		if (xml != null)
+			for (node in xml.elements()) {
+				if (i <= index)
+					n = node;
+				else break;
+				
+				i++;
+			}
 		
 		return n;
 	}
