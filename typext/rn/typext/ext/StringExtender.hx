@@ -54,4 +54,7 @@ class StringExtender {
 	}
 	
 	public static function escNull (str:String) : String return str == null ? "" : str;
+	
+	public static function isNullOrEmpty (str:String) : Bool
+		return !(str > "");
 }
