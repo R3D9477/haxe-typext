@@ -1,16 +1,23 @@
 package rn.typext.ext;
 
+using StringTools;
+
 class ClassExtender {
 	public static function is (cls:Class<Dynamic>, destCls:Class<Dynamic>) : Bool {
+		var coincidence:Bool = false;
+		
 		if (cls != null)
 			do {
-				if (cls == destCls)
-					return true;
+				coincidence = (cls == destCls);
 				
-				cls = Reflect.field(cls, "__super__");
+				if (!coincidence)
+					coincidence = (Type.resolveClass(Std.string(untyped cls.__name__).replace("[", "").replace("", "]").replace(",", ".")) == destCls); // needed for binary-classes
+				
+				if (!coincidence)
+					cls = Reflect.field(cls, "__super__");
 			}
-			while (cls != null);
+			while (!coincidence && cls != null);
 		
-		return false;
+		return coincidence;
 	}
 }
