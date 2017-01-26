@@ -11,10 +11,10 @@ class ClassExtender {
 				coincidence = (cls == destCls);
 				
 				if (!coincidence)
-					coincidence = (Type.resolveClass(Std.string(untyped cls.__name__).replace("[", "").replace("", "]").replace(",", ".")) == destCls); // needed for binary-classes
+					coincidence = (Type.resolveClass(Std.string(untyped cls.__name__).replace("[", "").replace("", "]").replace(",", ".")) == destCls); // need for classes from binary modules
 				
 				if (!coincidence)
-					cls = Reflect.field(cls, "__super__");
+					cls = untyped cls.__super__;
 			}
 			while (!coincidence && cls != null);
 		
