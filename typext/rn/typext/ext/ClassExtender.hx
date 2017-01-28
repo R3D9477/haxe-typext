@@ -6,7 +6,7 @@ class ClassExtender {
 	public static function is (cls:Class<Dynamic>, destCls:Class<Dynamic>) : Bool {
 		var coincidence:Bool = false;
 		
-		if (cls != null)
+		if (cls != null && destCls != null)
 			do {
 				coincidence = (cls == destCls);
 				
