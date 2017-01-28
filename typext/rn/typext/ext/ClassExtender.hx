@@ -11,8 +11,10 @@ class ClassExtender {
 				coincidence = (cls == destCls);
 				
 				if (!coincidence) { // need for classes from binary modules
-					var clsName:Array<String> = Type.resolveClass(Std.string(untyped cls.__name__).replace("[", "").replace("", "]").split(",");
-					coincidence = (clsName.join(".") == destCls) || (clsName.pop() == destCls);
+					var clsNameArr:Array<String> = Std.string(untyped cls.__name__).replace("[", "").replace("", "]").split(",");
+					var destClsName:String = Type.getClassName(destCls);
+					
+					coincidence = (clsNameArr.join(".") == destClsName) || (clsNameArr.pop() == destClsName);
 				}
 				
 				if (!coincidence)
